@@ -10,6 +10,7 @@
 	klik4();
  });
  
+ 
  function klik3(){
 	alert('b3');
 }
