@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Design Assignment</title>
+	<script src="jquery-2.1.1.min.js"></script>  
+	<script src="lab3.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile-1.4.4.min.css" />
+	<link rel="stylesheet" type="text/css" href="mq.css" />
+	<script src="jquery-2.1.1.min.js"></script>
+	<script src="jquery.mobile-1.4.4.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+<div data-role="header">
+<h1>Responsive Design</h1>
+	<a href="RDA.html" data-icon="home">Home</a>
+</div>	
+
+<div data-role="footer">
+<div data-role="navbar">
+<ul>
+<li><a id="fp" href="RDAI.html">iPhone</a></li>
+<li><a id="tp" href="RDAA.html">Android</a></li>
+<li><a id="fp" href="RDAW.html">Desktop</a></li>
+</ul>
+</div>
+</div>		
+
+<div id="container">
+
+<div id="nav" data-role="collapsible-set">
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+    <h4>Readings</h4>
+    <ul data-role="listview">
+			<li><a href="http://www.slideshare.net/maxdesign/css3-media-queries">Reading 1</a></li>
+			<li><a href="http://www.vanseodesign.com/css/media-queries/">Reading 2</a></li>
+			<li><a href="http://alistapart.com/article/responsive-web-design">Reading 3</a></li>
+			<li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design">Reading 4</a></li>
+			<li><a href="http://coding.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/">Reading 5</a></li>
+			<li><a href="http://www.w3.org/TR/css3-mediaqueries/">Reading 6</a></li>
+    </ul>
+  	</div>
+	</div>
+</div>
+
+<div id="content">
+		<h2>
+			iPhone 5
+		</h2>
+		<p><img class="myimagebig" src="iphone5im.jpg" alt="w3c" /><br>On this device the site works pretty well. <br><br>On portrait it obviously moves all the three columns into one. It looks pretty optimum. <br><br>On landscape there is a lot of unused space. I could have done a lot more optimisation for this device. In this mode the site stays in one column. The margins need more work done</p>
+</div>
+
+</div>
+	
+</body>
+</html>

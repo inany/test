@@ -1,0 +1,99 @@
+body
+{
+	margin: 20px;
+	color: ;
+	background:;
+	font: "Times New Roman", Times, serif;
+	font-size:120%;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   text-align: left;
+   bottom:0px;
+   height:40px;
+   width:100%;
+   background:#999;
+}
+
+#container
+{
+	float: left;
+	width: 1000px;
+}
+
+#nav
+{
+	float: left;
+	width: 200px;
+}
+
+#content
+{
+	float: left;
+	width: 55%;
+	margin: 0 0 0 25px;
+}
+
+#extras
+{
+	float: right;
+	width: 20%;
+}
+
+.myimagebig
+{
+	float: top;
+	max-width: 94%; 
+	margin: 0 0 10px 10px;
+}
+
+.myimage
+{
+	float: right;
+	max-width: 90%;
+	margin: 0 0 10px 10px;
+}
+
+@media screen and (max-width:999px)
+{
+	#container { width: 80%; }
+
+	#extras
+	{
+		clear: left;
+		float: none;
+		margin: 0 0 0 225px;
+		width: 55%;
+	}
+}
+
+@media screen and (max-width:580px) 
+{
+	#container { width: 400px; }
+
+	#nav
+	{
+		float: none;
+		width: 80%;
+		margin: 0;
+	}
+
+	#content
+	{
+		float: none;
+		width: 80%;
+		margin: 0;
+	}
+
+	#extras
+	{
+		float: none;
+		width: 80%;
+		margin: 0;
+	}
+	
+	.myimage { display: none; }
+	
+}

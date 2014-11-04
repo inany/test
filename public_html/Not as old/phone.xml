@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<COLLECTION>
+	<PHONE>
+		<BRAND>Nokia</BRAND>
+		<MODEL>2110</MODEL>
+		<OS>NOS</OS>
+		<YEAR>1994</YEAR>
+	</PHONE>
+	<PHONE>
+		<BRAND>Nokia</BRAND>
+		<MODEL>8110</MODEL>
+		<OS>NOS</OS>
+		<YEAR>1996</YEAR>
+	</PHONE>
+</COLLECTION>

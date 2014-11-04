@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compare, find, list, search</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="ss.css" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+<script type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+
+<script>
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","http://users.metropolia.fi/~inany/Feedinkxml.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+x=xmlDoc.getElementsByTagName("product");
+i=0;
+
+function displayPRODUCT()
+{
+document.write("<table border='1'>");
+var x=xmlDoc.getElementsByTagName("product");
+//var linkValue=x[i].getElementsByTagName("productUrl")[0].childNodes[0].nodeValue;
+for (i=0;i<x.length;i++)
+  { 
+  document.write("<tr><td>");
+  document.write("<img src='" + x[i].getElementsByTagName("imageUrl")[0].childNodes[0].nodeValue + "' alt='' width='5%'>");
+  document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");	
+   document.write("<a href='"+x[i].getElementsByTagName("productUrl")[0].childNodes[0].nodeValue+"' target='_blank'>");
+   document.write(x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue);
+  document.write("</td></td>");
+  }
+document.write("</table>");
+}
+</script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Checkb4ubuy</h1>
+    	<a href="#pageone" data-icon="home">Home</a>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#traveltwo" >Travel</a></li>
+        <li><a href="#producttwo" >Products</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+ <div id="content">
+		<h2>Checkb4ubuy</h2>
+		<h3>This will be an amazing new service that will offer people a way to find, search and list the best and most up-to-date products around.<br><br>We will be using the most advance technologies to make a fast and simplistic user experience.<br><br>The service will employ the most powerful and insightful search and filter features, combined with intelligent algorithms to help find the best value for services and products available on the market today.</h3>
+</div>
+
+ <div id="contenttwo">
+  	<img class="myimage" src="pound.png" alt="w3c" />
+</div>
+
+  </div>
+
+  <div data-role="footer" id="footer" class="fleft">
+    <h1>Copyright - believe-IT</h1>
+  </div> 
+</div> 
+
+<div data-role="page" id="traveltwo">
+  <div data-role="header">
+    <h1>Checkb4ubuy</h1>
+	    <a href="#pageone" data-icon="home">Home</a>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#traveltwo" class="ui-btn-active ui-state-persist" >Travel</a></li>
+        <li><a href="#producttwo" >Product</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  <div id="content">
+	<h3>Travel</h3>
+	<p>Stay tuned for the most up-to-date offers for flights and hotels<br><br>We will be offering deals in a new way compared to what is currently available. The focus will be on value for money using algorithms to design whole trips for people who have flexible requirements</b></p>
+  </div>
+
+  </div>
+
+  <div data-role="footer" id="footer" class="fleft">
+    <h1>Copyright - believe-IT</h1>
+  </div>
+</div>
+
+<div data-role="page" id="producttwo">
+  <div data-role="header">
+    <h1>Checkb4ubuy</h1>
+    	<a href="#pageone" data-icon="home">Home</a>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#traveltwo" >Travel</a></li>
+        <li><a href="#producttwo" class="ui-btn-active ui-state-persist" >Product</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  <div id="content">
+	<h3>Products</h3>
+	        <script type="text/javascript">
+            displayPRODUCT();
+        </script>	
+	<p>In the coming weeks we will be offering a list of many products from all the major retailers<br><br>Check us out before deciding on a purchase to get the best deals for you</b></p>
+  </div>
+</div>
+
+  <div data-role="footer" id="footer" class="fleft">
+    <h1>Copyright - believe-IT</h1>
+  </div>
+</div> 
+
+</body>
+</html>
